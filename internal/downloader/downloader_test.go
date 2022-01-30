@@ -69,7 +69,7 @@ func TestDownloadVersionedBinarySuccessOnFirstTry(t *testing.T) {
 	data, err := os.ReadFile(filepath.Join("testdata", "envoy-v1.12.2-linux-amd64.tar.xz"))
 	require.NoError(t, err)
 	transport.AddResponse(downloader.GetArchiveURL("1.12.2"), 200, string(data), nil)
-	downloaded, err := downloader.DownloadVersionedBinary(context.Background(), "1.12.2", "/Users/dio/src/runproxy/internal/downloader/test", "envoy")
+	downloaded, err := downloader.DownloadVersionedBinary(context.Background(), "1.12.2", t.TempDir(), "envoy")
 	require.NoError(t, err)
 	require.FileExists(t, downloaded)
 }
