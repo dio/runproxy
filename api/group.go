@@ -25,7 +25,7 @@ import (
 	"time"
 
 	bootstrapv3 "github.com/envoyproxy/go-control-plane/envoy/config/bootstrap/v3"
-	_ "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3" // added to resolved v3.HttpConnectionManager.
+	_ "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3" // added to resolve v3.HttpConnectionManager.
 	"github.com/tetratelabs/run"
 	"github.com/tetratelabs/telemetry"
 	"google.golang.org/protobuf/encoding/protojson"
